@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,93 +10,159 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Product preview card component</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    @media (min-width: 375px) and (max-width: 1440px){ 
+          body {
+            background-color: hsl(30, 38%, 92%);
+            margin: 0;
+            padding: 0; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+          }
+          #prod-cart { 
+            border-radius: 5px;
+            background-color: hsl(0, 0%, 100%);
+            display: flex;
+            flex-direction: row;
+            max-width: 500px;
+            cursor: pointer;
+            overflow: hidden;  
+          }
+          .img-side {
+            flex: 1;
+            background-image: url("images/image-product-desktop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .content-side {
+            flex: 1;
+            padding: 25px;
+            font-family: "Fraunces", serif;
+          }
+          p {
+            font-family: "Montserrat", sans-serif; 
+            padding: 10px 0;
+            opacity: 0.9;
+            font-size: 14px;
+          }
+          button {
+            padding: 10px;
+            width: 100%;
+            background-color: hsl(158, 36%, 37%);  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            font-size: 16px;  
+            cursor: pointer;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+          }
+          button:hover{
+            background-color: hsl(158, 49%, 18%);  
+          }
+          button img {
+            margin-right: 10px; 
+          }
+          .price-prod {
+            display: flex;
+            align-items: center;
+          }
+          .price-prod h1 {
+            margin-right: 15px;
+            font-size: 24px;
+            color: hsl(158, 36%, 37%);
+          }
+          .price-prod p {
+            text-decoration: line-through;
+            color: hsl(228, 12%, 48%);
+          }
     }
-    body {
-      background-color: hsl(30, 38%, 92%);
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Montserrat", sans-serif;
-    }
-    #prod-cart {
-      border-radius: 5px;
-      background-color: hsl(0, 0%, 100%);
-      display: flex;
-      flex-direction: row;
-      max-width: 500px;
-      cursor: pointer;
-      overflow: hidden;  
-    }
-    .img-side {
-      flex: 1;
-      background-image: url("images/image-product-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .content-side {
-      flex: 1;
-      padding: 25px;
-      font-family: "Fraunces", serif;
-    }
-    p {
-      padding: 10px 0;
-      opacity: 0.9;
-      font-size: 14px;
-    }
-    button {
-      padding: 10px;
-      width: 100%;
-      background-color: hsl(158, 36%, 37%);  
-      color: white; 
-      border: none;  
-      border-radius: 5px;  
-      font-size: 16px;  
-      cursor: pointer;  
-      display: flex; 
-      justify-content: center;  
-      align-items: center;  
-    }
-    button img {
-      margin-right: 10px;  
-    }
-    .price-prod {
-      display: flex;
-      align-items: center;
-    }
-    .price-prod h1 {
-      margin-right: 15px;
-      font-size: 24px;
-      color: hsl(158, 36%, 37%);
-    }
-    .price-prod p {
-      text-decoration: line-through;
-      color: hsl(228, 12%, 48%);
-    }
-    @media (max-width: 375px) {
-      #prod-cart {
-        flex-direction: column;  
-      }
-      .img-side {
-        height: 200px;  
-      }
-      .content-side {
-        padding: 20px;
-      }
-    }
+    
+    @media (max-width: 375px) {  
+          *{
+            margin: 0;
+            padding: 0; 
+          }
+          body {
+            background-color: hsl(30, 38%, 92%);
+            margin: 0;
+            padding: 0; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+          }
+          #prod-cart {
+            margin: 0px 15px 0px; 
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: hsl(0, 0%, 100%); 
+            height: 580px;
+            display: flex;
+            flex-direction: column; 
+            cursor: pointer; 
+            overflow: hidden;
+          }
+          .img-side { 
+            width: 100%;
+            height: 45%;  
+            background-image: url("images/image-product-desktop.jpg"); 
+            background-size: cover;
+            background-position: center;
+          }
+          .content-side {  
+            height: 55%; 
+            padding: 0px 25px 0px;
+            font-family: "Fraunces", serif;
+          }
+          p { 
+            font-family: "Montserrat", sans-serif; 
+            opacity: 1;
+            font-size: 14px;
+            margin: 20px 0px 10px;
+          }
+          button {
+            padding: 10px;
+            width: 100%;
+            background-color: hsl(158, 36%, 37%);  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            font-size: 16px;  
+            cursor: pointer;  
+            margin: 10px 0px 5px;
+          }
+          button:hover{
+            background-color: hsl(158, 49%, 18%);  
+          }
+          button img {
+            margin-right: 10px;  
+          }
+          .price-prod {
+            display: flex;
+            align-items: center;
+          }
+          .price-prod h1 {
+            margin-right: 15px;
+            font-size: 24px;
+            color: hsl(158, 36%, 37%);
+          }
+          .price-prod p {
+            text-decoration: line-through;
+            color: hsl(228, 12%, 48%);
+          }
+}
+
+
   </style>
 </head>
-<body>
-  <main>
+<body> 
     <header id="prod-cart">
       <section class="img-side"></section>
       <section class="content-side">
-        <p>Perfume</p>
+        <p style="letter-spacing: 4px;">PERFUME</p>
         <h1 style="font-weight: 700;">Gabrielle Essence Eau De Parfum</h1>
         <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
         <section class="price-prod">
@@ -105,7 +171,7 @@
         </section>
         <button type="button"><img src="images/icon-cart.svg" alt="Cart Image"> Add to Cart</button>
       </section>
-    </header>
-  </main>
+    </header> 
 </body>
 </html>
+
